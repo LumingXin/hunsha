@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>摄影基地</title>
+	<link rel="stylesheet" href="css/gonggong.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="sheying">
+    <audio src="../image/复件(0) 纯音乐 - 夜的钢琴曲.mp3" autoplay loop ></audio>
+  <!--顶部 -->
+  <div class="db">
+  <div class="dingbu gwidth">
+    <img src="image/logo.jpg" class="imga">
+    <h6>爱情海婚纱摄影基地</h6>
+    <ul>
+      <li><span>热线电话 :</span></li>
+      <li>+86-0000-96877</li>
+  </ul>
+  </div>
+</div>
+  <!--导航 -->
+  <div class="nav">
+    <ul class="daohang gwidth">
+     <li><a class="active" href="../首页.html">首页</a></li>
+  <div class="dropdown">
+    <a href="../关于我们/关于我们.html" class="dropbtn">关于我们</a>
+    <div class="dropdown-content">
+      <a href="关于我们/关于我们.html">发展历史</a>
+    </div>
+  </div>
+  <div class="dropdown">
+    <a href="../产品展示/产品展示.html" class="dropbtn">作品展示</a>
+    <div class="dropdown-content">
+      <a href="#">明星式主题</a>
+      <a href="#">浪漫花海系列</a>
+      <a href="#">浪漫海景系列</a>
+      <a href="">首尔美学馆</a>
+      <a href="">沈城绿植系列</a>
+    </div>
+  </div>
+  <div class="dropdown">
+    <a href="../团队展示/团队展示.html" class="dropbtn">团队展示</a>
+    <div class="dropdown-content">
+      <a href="#">高级造型师</a>
+      <a href="#">高级化妆师</a>
+      <a href="#">高级摄影师</a>
+    </div>
+  </div>
+  <div class="dropdown">
+    <a href="#" class="dropbtn">新闻资讯</a>
+    <div class="dropdown-content">
+      <a href=""></a>
+    </div>
+  </div>
+  <div class="dropdown">
+    <a href="#" class="dropbtn">行业资讯</a>
+    <div class="dropdown-content">
+      <a href=""></a>
+    </div>
+  </div>
+  <div class="dropdown">
+    <a href="#" class="dropbtn">资质荣誉</a>
+    <div class="dropdown-content">
+      <a href=""></a>
+    </div>
+  </div>
+  <div class="dropdown">
+    <a href="#" class="dropbtn">人才招聘</a>
+    <div class="dropdown-content">
+      <a href=""></a>
+    </div>
+  </div>
+  <div class="dropdown ">
+    <p class="activea"><a href="联系我们.html" class="dropbtn ">联系我们</a></p>
+    <div class="dropdown-content">
+      <a href=""></a>
+    </div>
+  </div>
+    </ul>
+  </div>
+  <!--banner -->
+    <!-- wrap包裹录播的图片以及可点击跳转的按钮 -->
+    <div class="wrap" id="wrap">
+        <ul id="pic">
+             <li><img src="image/banner.jpg" alt=""></li>
+              <li><img src="image/banner1.jpg.jpg" alt=""></li>
+              <li><img src="image/banner2.jpg" alt=""></li>
+        </ul>
+        <ol id="list">
+            <li class="activea">1</li>
+            <li>2</li>
+            <li>3</li>
+        </ol>
+    </div>
+    <script type="text/javascript">
+window.onload=function(){
+    var wrap=document.getElementById('wrap'),
+        pic=document.getElementById('pic'),
+        list=document.getElementById('list').getElementsByTagName('li'),
+        index=0,
+        timer=null;
+      // 定义并调用自动播放函数
+      if(timer){
+          clearInterval(timer);
+          timer=null;
+      }
+timer=setInterval(autoplay,1900);
+      // 定义图片切换函数
+      function autoplay(){
+          index++;
+          if(index>=list.length){
+              index=0;
+          }
+         changeoptions(index);
+      }
+     // 鼠标划过整个容器时停止自动播放
+wrap.onmouseover=function(){
+    clearInterval(timer);
+}
+     // 鼠标离开整个容器时继续播放至下一张
+    wrap.onmouseout=function(){
+
+    timer=setInterval(autoplay,1300);
+}
+     // 遍历所有数字导航实现划过切换至对应的图片
+     for(var i=0;i<list.length;i++){
+         list[i].id=i;
+         list[i].onmouseover=function(){
+             clearInterval(timer);
+             changeoptions(this.id);
+             }
+         }
+        function changeoptions(curindex){
+            for(var j=0;j<list.length;j++){
+              list[j].className='';
+              pic.style.top=0;
+          }
+          list[curindex].className='activea';
+          pic.style.left=-curindex*1900+'px';
+          index=curindex;
+            }
+   }
+    </script>
+  <!--内容区 -->
+  <div class="nrq gwidth">
+	<div class="lianxi">
+		<h4>联系我们</h4><p>当前位置：<a href="../首页.html">首页</a>&gt;关于我们</p>
+	</div>
+  <div class="wenzi">
+  <h5>联系我们</h5>
+  <ul>
+  <a href=""><img src="image/jia.jpg"></a>
+  <a href=""><img src="image/qqkj.jpg"></a>
+  <a href=""><img src="image/weibo.jpg"></a>
+  <a href=""><img src="image/ren.jpg"></a>
+  <a href=""><img src="image/weibo2.jpg"></a>
+  <a href=""><img src="image/weibo3.jpg"></a>
+  </ul>
+  </div>
+  <div class="box">
+  <p>公司地址：河北省保定市</p>
+  <p>热线电话：+86-0000-96877</p>
+  <p>传&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;真：+86-0000-96877</p>
+  <p>邮&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;编：076000</p>
+  <p>邮箱地址：河北省保定市</p>
+  </div>
+  <div style="width:697px;height:550px;border:#ccc solid 1px;" id="dituContent">
+  	<script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
+  </div>
+  	<script type="text/javascript">
+    //创建和初始化地图函数：
+    function initMap(){
+        createMap();//创建地图
+        setMapEvent();//设置地图事件
+        addMapControl();//向地图添加控件
+        addRemark();//向地图中添加文字标注
+    }
+    
+    //创建地图函数：
+    function createMap(){
+        var map = new BMap.Map("dituContent");//在百度地图容器中创建一个地图
+        var point = new BMap.Point(115.550822,38.873954);//定义一个中心点坐标
+        map.centerAndZoom(point,17);//设定地图的中心点和坐标并将地图显示在地图容器中
+        window.map = map;//将map变量存储在全局
+    }
+    
+    //地图事件设置函数：
+    function setMapEvent(){
+        map.enableDragging();//启用地图拖拽事件，默认启用(可不写)
+        map.enableScrollWheelZoom();//启用地图滚轮放大缩小
+        map.enableDoubleClickZoom();//启用鼠标双击放大，默认启用(可不写)
+        map.enableKeyboard();//启用键盘上下左右键移动地图
+    }
+    
+    //地图控件添加函数：
+    function addMapControl(){
+        //向地图中添加缩放控件
+    var ctrl_nav = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:BMAP_NAVIGATION_CONTROL_LARGE});
+    map.addControl(ctrl_nav);
+        //向地图中添加缩略图控件
+    var ctrl_ove = new BMap.OverviewMapControl({anchor:BMAP_ANCHOR_BOTTOM_RIGHT,isOpen:1});
+    map.addControl(ctrl_ove);
+        //向地图中添加比例尺控件
+    var ctrl_sca = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
+    map.addControl(ctrl_sca);
+    }
+    
+//文字标注数组
+    var lbPoints = [{point:"115.550454|38.875738",content:"这是我们的地址：爱情海婚纱摄影"}
+         ];
+    //向地图中添加文字标注函数
+    function addRemark(){
+        for(var i=0;i<lbPoints.length;i++){
+            var json = lbPoints[i];
+            var p1 = json.point.split("|")[0];
+            var p2 = json.point.split("|")[1];
+            var label = new BMap.Label("<div style='padding:2px;'>"+json.content+"</div>",{point:new BMap.Point(p1,p2),offset:new BMap.Size(3,-6)});
+            map.addOverlay(label);
+            label.setStyle({borderColor:"#999"});
+        }
+    }
+    
+    initMap();//创建和初始化地图
+</script>
+    <div class="fhlb">
+    <h4><a href="../首页.html">返回首页</a></h4>
+  </div>
+  </div>
+  <!--尾部 -->
+  <div class="dibu">
+  <div class="q gwidth">
+  <div class="w">
+  <div class="k">
+    <div class="kt">
+    <h6>CONTRONT</h6>
+    <p><a href="联系我们.html">联系我们</a></p>
+    </div>
+    <div class="kt1">
+    <h6>SITE</h6>
+    <p>网站导航</p>
+    </div>
+    </div>
+    </div>
+    <div class="z">
+    <div class="zuo1">
+    <ul>
+        <li>公司地址：河北省保定市</li>
+        <li>热线电话：+86-0000-96877</li>
+        <li>传&nbsp;&nbsp;真:+86-0000-96877</li>
+    </ul>
+    </div>
+    <div class="zuo2">
+    <ul class="u1">
+      <li><a href="../首页.html">首页</a></li>
+      <li><a href="../团队展示/团队展示.html">团队展示</a></li>
+        <li><a href="">资质荣誉</a></li>
+        <li><a href="联系我们.html">联系我们</a></li>
+    </ul>
+    <ul class="u2">
+        <li><a href="关于我们/关于我们.html">关于我们</a></li>
+        <li><a href="新闻资讯/新闻资讯.html">新闻资讯</a></li>
+        <li><a href="">服务特色</a></li>
+        <li><a href="#">在线留言</a></li>
+    </ul>
+    <ul class="u3">
+        <li><a href="../产品展示/产品展示.html">作品展示</a></li>
+        <li><a href="">行业资讯</a></li>
+        <li><a href="">人才招聘</a></li>
+    </ul>
+    </div>
+    <div class="ee">
+    <div class="ewm">
+    <img src="image/e.gif" class="e1">
+    <img src="image/r.gif" class="e2">
+    <p>爱情海婚纱摄影基地二维码</p>
+    </div>
+    <div class="uu">
+    <ul>
+  <a href=""><img src="image/1.gif"></a>
+  <a href=""><img src="image/2.gif"></a>
+  <a href=""><img src="image/3.gif"></a>
+  <a href=""><img src="image/4.gif"></a>
+  <a href=""><img src="image/5.gif"></a>
+  <a href=""><img src="image/6.gif"></a>
+  </ul>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+ </div>
+</body>
+</html>
