@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>摄影基地</title>
+	<link rel="stylesheet" href="css/gonggong.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="sheying">
+		<audio src="image/复件(0) 纯音乐 - 夜的钢琴曲.mp3" autoplay loop ></audio>
+	<!--顶部 -->
+	<div class="db">
+	<div class="dingbu gwidth">
+		<img src="image/logo.jpg" class="imga">
+		<h6>爱情海婚纱摄影基地</h6>
+		<ul>
+			<li><span>热线电话 :</span></li>
+		  <li>+86-0000-96877</li>
+	</ul>
+	</div>
+</div>
+	<!--导航 -->
+	<div class="nav">
+		<ul class="daohang gwidth">
+		 <li><a class="active" href="#home">首页</a></li>
+  <div class="dropdown">
+    <a href="关于我们/关于我们.html" class="dropbtn">关于我们</a>
+    <div class="dropdown-content">
+      <a href="关于我们/关于我们.html">发展历史</a>
+    </div>
+  </div>
+  <div class="dropdown">
+    <a href="产品展示/产品展示.html" class="dropbtn">作品展示</a>
+    <div class="dropdown-content">
+      <a href="#>明星式主题</a>
+      <a href="#">浪漫花海系列</a>
+      <a href="#">浪漫海景系列</a>
+      <a href="">首尔美学馆</a>
+      <a href="">沈城绿植系列</a>
+    </div>
+  </div>
+  <div class="dropdown">
+    <a href="团队展示/团队展示.html" class="dropbtn">团队展示</a>
+    <div class="dropdown-content">
+      <a href="#">高级造型师</a>
+      <a href="#">高级化妆师</a>
+      <a href="#">高级摄影师</a>
+    </div>
+  </div>
+  <div class="dropdown">
+    <a href="新闻资讯/新闻资讯.html" class="dropbtn">新闻资讯</a>
+    <div class="dropdown-content">
+    	<a href=""></a>
+    </div>
+  </div>
+  <div class="dropdown">
+    <a href="#" class="dropbtn">行业资讯</a>
+    <div class="dropdown-content">
+    	<a href=""></a>
+    </div>
+  </div>
+  <div class="dropdown">
+    <a href="#" class="dropbtn">资质荣誉</a>
+    <div class="dropdown-content">
+    	<a href=""></a>
+    </div>
+  </div>
+  <div class="dropdown">
+    <a href="#" class="dropbtn">人才招聘</a>
+    <div class="dropdown-content">
+    	<a href=""></a>
+    </div>
+  </div>
+  <div class="dropdown">
+    <a href="联系我们/联系我们.html" class="dropbtn">联系我们</a>
+    <div class="dropdown-content">
+    	<a href=""></a>
+    </div>
+  </div>
+		</ul>
+	</div>
+	<!--banner -->
+		<!-- wrap包裹录播的图片以及可点击跳转的按钮 -->
+    <div class="wrap" id="wrap">
+        <ul id="pic">
+             <li><img src="image/banner.jpg" alt=""></li>
+              <li><img src="image/banner1.jpg.jpg" alt=""></li>
+              <li><img src="image/banner2.jpg" alt=""></li>
+        </ul>
+        <ol id="list">
+            <li class="activea">1</li>
+            <li>2</li>
+            <li>3</li>
+        </ol>
+    </div>
+    <script type="text/javascript">
+    var wrap=document.getElementById('wrap'),
+        pic=document.getElementById('pic'),
+        list=document.getElementById('list').getElementsByTagName('li'),
+        index=0,
+        timer=null;
+      // 定义并调用自动播放函数
+      if(timer){
+          clearInterval(timer);
+          timer=null;
+      }
+timer=setInterval(autoplay,1900);
+      // 定义图片切换函数
+      function autoplay(){
+          index++;
+          if(index>=list.length){
+              index=0;
+          }
+         changeoptions(index);
+      }
+     // 鼠标划过整个容器时停止自动播放
+wrap.onmouseover=function(){
+    clearInterval(timer);
+}
+     // 鼠标离开整个容器时继续播放至下一张
+    wrap.onmouseout=function(){
+
+    timer=setInterval(autoplay,1300);
+}
+     // 遍历所有数字导航实现划过切换至对应的图片
+     for(var i=0;i<list.length;i++){
+         list[i].id=i;
+         list[i].onmouseover=function(){
+             clearInterval(timer);
+             changeoptions(this.id);
+             }
+         }
+        function changeoptions(curindex){
+            for(var j=0;j<list.length;j++){
+              list[j].className='';
+              pic.style.top=0;
+          }
+          list[curindex].className='activea';
+          pic.style.left=-curindex*1900+'px';
+          index=curindex;
+            }
+  
+    </script>
+	<!--关于我们 -->
+	<div class="gywm ggwidth">
+		<div class="guanyu">
+			<h5>关于我们</h5>
+			<p>ABOUT US</p>
+		</div>
+		<div class="gywma gwidth">
+			<img src="image/img1.jpg" class="aa">
+			<h4>爱情海婚纱摄影基地</h4>
+			<p>爱情海婚纱摄影基地最初由数位多年从事广告、摄影、造型、服装、媒体等领域的志同道合的朋友组成，经过几年的努力和发展，已成为国内拥有顶尖的策划、造型、摄影、设计及推广等专业人员的高效团队。爱情海婚纱摄影基地致力于商业广告，服装画册，杂志拍摄，艺人模特宣传，歌手专辑，个人影像定制，主题样片，企业家肖像，公众人物拍摄等各种时尚类的视觉。爱情海婚纱摄影基地作品在众多媒体上广为流传，部分作品在网络世界如病毒一样传播，是杭州新锐摄影的佼佼者。</p>
+			<a href="关于我们/关于我们.html">VIEW MORE</a>
+	</div>
+	</div>
+	<!--产品中心 -->
+	<div class="cpzx ggwidth">
+		<div class="chanpin">
+			<h5>产品中心</h5>
+			<p>PRODUCT CENTER</p>
+		</div>
+		<div class="cpzxa gwidth">
+			<p>HOT PRODUCT</p>
+			<div id="container">
+        <div id="lista" style="left: 0px;">
+          <img src="image/img2.jpg" alt="2"/>
+            <img src="image/img22.jpg" alt="1"/>
+        </div>
+         <a href="javascript:;" id="prev" class="arrow">&lt;</a>
+         <a href="javascript:;" id="next" class="arrow">&gt;</a>
+     </div>
+     <script type="text/javascript">
+     	window.onload = function() {
+            var lista = document.getElementById('lista');var prev = document.getElementById('prev');
+            var next = document.getElementById('next');
+
+            function animate(offset) {
+                //获取的是style.left，是相对左边获取距离，所以第一张图后style.left都为负值，
+                //且style.left获取的是字符串，需要用parseInt()取整转化为数字。
+                var newLeft = parseInt(lista.style.left) + offset;
+                lista.style.left = newLeft + 'px';
+                if(newLeft < -440){
+lista.style.left = 0 + 'px';
+}
+else if(newLeft > 0){
+lista.style.left = -440 + 'px';
+}
+            }
+            prev.onclick = function() {
+                animate(440);
+            }
+            next.onclick = function() {
+                animate(-440);
+            }
+        }
+     </script>
+		<div class="you">
+			<ul class="youdh">
+				<li  style="color:#D3B162;">明星式主题</li>
+				<li>首尔美学馆</li>
+				<li>浪漫花海系列</li>
+				<li>沈城绿植系列</li>
+				<li>浪漫海景系列</li>
+			</ul>
+			<div class="yhover">
+			<img src="image/img3.jpg">
+			<p>奢华水晶系列</p>
+			<span></span>
+			</div>
+			<div class="yhover">
+			<img src="image/img4.jpg">
+			<p>奢华水晶系列</p>
+			<span></span>
+			</div>
+			<div class="yhover">
+			<img src="image/img5.jpg">
+			<p>奢华水晶系列</p>
+			<span></span>
+			</div>
+			<div class="yhover">
+			<img src="image/img6.jpg">
+			<p>奢华水晶系列</p>
+			<span></span>
+			</div>
+			<div class="yhover">
+			<img src="image/img7.jpg">
+			<p>奢华水晶系列</p>
+			<span></span>
+			</div>
+			<div class="yhover">
+			<img src="image/img8.jpg">
+			<p>奢华水晶系列</p>
+			<span></span>
+			</div>
+		</div>
+	</div>
+	</div>
+	<!--新闻资讯 -->
+	<div class="xwzx ggwidth">
+		<div class="xinwen">
+			<h5>新闻资讯</h5>
+			<p>NEWS</p>
+		</div>
+		<div class="xwzxa gwidth">
+			<div class="left">
+				<div class="news">
+				<h5>NEWS</h5>
+				<h6>新闻资讯</h6>
+			</div>
+		<img src="image/zixun1.jpg" class="cc">
+		<ul>
+			<li><a href="新闻资讯/新闻资讯.html"><span>1</span>恋上神秘布拉格，很多人都会想到红色屋顶、查理大桥和神秘的城堡</a></li>
+			<li><a href="新闻资讯/新闻资讯.html"><span>2</span>唯一带你去普吉，被称为“安达曼海上的一颗明珠”</a></li>
+			<li><a href="新闻资讯/新闻资讯.html"><span>3</span>婚纱照就要美的不一样，美出自己的特色，美出自己的个性</a></li>
+			<li><a href="新闻资讯/新闻资讯.html"><span>4</span>唯一视觉与你相约花海，花期都是转瞬即逝的，拍摄外景婚纱照。花海</a></li>
+			<li><a href="新闻资讯/新闻资讯.html"><span>5</span>完美动作，和他一起来组图，完美的妆容搭配、婚纱服饰，动作造型 </a></li>
+			<li><a href="新闻资讯/新闻资讯.html"><span>6</span>这个季节，爱琴海带你穿越麦浪，在无边的麦浪里找寻幸福的源泉</a></li>
+			<li><a href="新闻资讯/新闻资讯.html"><span>7</span>爱在巴厘岛，素有“东方的希腊”之美誉，地处热带，四季都是绿水青山</a></li>
+			<li><a href="新闻资讯/新闻资讯.html"><span>8</span>拥有顶尖的策划、造型、摄影、设计及推广等专业人员的高效团队</a></li>
+		</ul>
+		<div class="bottom">
+		<img src="image/zixun3.jpg">
+		<h4><a href="新闻资讯/新闻资讯.html">了解更多></a></h4>
+	</div>
+	</div>
+	<div class="right">
+		<img src="image/zixun2.jpg">
+				<div class="newss">
+				<h5>NEWS</h5>
+				<h6>行业资讯</h6>
+			</div>
+		<ul>
+			<li><a href="新闻资讯/新闻资讯.html"><span>1</span>爱情海婚纱摄影基地，一个记录您故事的地方。</a></li>
+			<li><a href="新闻资讯/新闻资讯.html"><span>2</span>爱情海婚纱摄影基地成立时间2014年。</a></li>
+			<li><a href="新闻资讯/新闻资讯.html"><span>3</span>影像视觉，用我们富有思想的镜头感染您的生活，您的商品，您的内心。</a></li>
+			<li><a href="新闻资讯/新闻资讯.html"><span>4</span>马尔代夫，爱的天堂，让婚纱记录梦想，记录永恒。</a></li>
+			<li><a href="新闻资讯/新闻资讯.html"><span>5</span>法国，欧洲的浪漫中心；巴黎，万千女孩向往的浪漫圣地。 </a></li>
+			<li><a href="新闻资讯/新闻资讯.html"><span>6</span>走近婚纱， 让自然占据心房，纪念曾经的生活，曾经的记忆</a></li>
+			<li><a href="新闻资讯/新闻资讯.html"><span>7</span>完美旅拍，为爱承载，旅拍 ，即为“在旅行中的记录”</a></li>
+			<li><a href="新闻资讯/新闻资讯.html"><span>8</span>完美pose，展现完美幸福，自己拍婚纱照很自然，很有范儿</a></li>
+		</ul>
+		<div class="bottom">
+		<img src="image/zixun3.jpg">
+		<h4><a href="新闻资讯/新闻资讯.html">了解更多></a></h4>
+	</div>
+	</div>
+	</div>
+	</div>
+	<!--团队展示 -->
+	<div class="tdzs ggwidth">
+		<div class="tuandui">
+			<h5>团队展示</h5>
+			<p>TEAN</p>
+		</div>
+		<div class="tdzsa gwidth">
+			<ul class="gaoji">
+				<li class="gaojia">
+					<img src="image/zhanshi1.jpg">
+					<h3>高级摄影师</h3>
+					<h3>MICHEAL.J</h3>
+					<p><a href="团队展示/团队展示.html">查看更多</a></p>
+				</li>
+				<li>
+					<img src="image/zhanshi2.jpg">
+					<h3>高级摄影师</h3>
+					<h3>MICHEAL.J</h3>
+					<p><a href="团队展示/团队展示.html">查看更多</a></p>
+				</li>
+				<li>
+					<img src="image/zhanshi3.jpg">
+					<h3>高级摄影师</h3>
+					<h3>MICHEAL.J</h3>
+					<p><a href="团队展示/团队展示.html">查看更多</a></p>
+				</li>
+				<li>
+					<img src="image/zhanshi4.jpg">
+					<h3>高级摄影师</h3>
+					<h3>MICHEAL.J</h3>
+					<p><a href="团队展示/团队展示.html">查看更多</a></p>
+				</li>
+				<li style="margin-right:0;">
+					<img src="image/zhanshi5.jpg">
+					<h3>高级摄影师</h3>
+					<h3>MICHEAL.J</h3>
+					<p><a href="团队展示/团队展示.html">查看更多</a></p>
+				</li>
+			</ul>
+	</div>
+	</div>
+<!--尾部 -->
+	<div class="dibu">
+	<div class="q gwidth">
+	<div class="w">
+	<div class="k">
+    <div class="kt">
+    <h6>CONTRONT</h6>
+    <p><a href="联系我们/联系我们.html">联系我们</a></p>
+    </div>
+    <div class="kt1">
+    <h6>SITE</h6>
+    <p>网站导航</p>
+    </div>
+    </div>
+    </div>
+    <div class="z">
+    <div class="zuo1">
+    <ul>
+        <li>公司地址：浙江省杭州市</li>
+        <li>热线电话：+86-0000-96877</li>
+        <li>传&nbsp;&nbsp;真:+86-0000-96877</li>
+    </ul>
+    </div>
+    <div class="zuo2">
+    <ul class="u1">
+      <li><a href="../首页.html">首页</a></li>
+      <li><a href="团队展示/团队展示.html">团队展示</a></li>
+        <li><a href="#">资质荣誉</a></li>
+        <li><a href="联系我们/联系我们.html">联系我们</a></li>
+    </ul>
+    <ul class="u2">
+        <li><a href="关于我们/关于我们.html">关于我们</a></li>
+        <li><a href="新闻资讯/新闻资讯.html">新闻资讯</a></li>
+        <li><a href="#">服务特色</a></li>
+        <li><a href="#">在线留言</a></li>
+    </ul>
+    <ul class="u3">
+        <li><a href="产品展示/产品展示.html">作品展示</a></li>
+        <li><a href="#">行业资讯</a></li>
+        <li><a href="#">人才招聘</a></li>
+    </ul>
+    </div>
+    <div class="ee">
+    <div class="ewm">
+    <img src="image/e.gif" class="e1">
+    <img src="image/r.gif" class="e2">
+    <p>爱情海婚纱摄影基地二维码</p>
+    </div>
+    <div class="uu">
+    <ul>
+	<a href=""><img src="image/1.gif"></a>
+	<a href=""><img src="image/2.gif"></a>
+	<a href=""><img src="image/3.gif"></a>
+	<a href=""><img src="image/4.gif"></a>
+	<a href=""><img src="image/5.gif"></a>
+	<a href=""><img src="image/6.gif"></a>
+	</ul>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+	</div>
+</body>
+</html>
